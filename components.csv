@@ -1,0 +1,38 @@
+type,name,price,use_case,performance_tier,socket_or_interface,wattage,notes
+CPU,AMD Ryzen 5 5600,140,Gaming,Mid,AM4,65,Great value gaming CPU
+CPU,AMD Ryzen 7 5700X,180,Gaming,High,AM4,65,Strong all-round gaming/streaming CPU
+CPU,Intel Core i5-12400F,150,Gaming,Mid,LGA1700,65,Excellent budget gaming CPU
+CPU,Intel Core i7-13700K,400,Video/photo editing,High,LGA1700,125,Great for multitasking and rendering
+CPU,AMD Ryzen 9 7900X,430,Video/photo editing,High,AM5,170,Excellent multicore performance for editing
+CPU,Intel Core i3-12100,110,Office and school work,Low,LGA1700,60,Efficient CPU for everyday tasks
+CPU,AMD Ryzen 5 5500,100,General everyday use,Low,AM4,65,Affordable everyday CPU
+CPU,Intel Core i5-13600K,320,Gaming,High,LGA1700,125,High-end gaming and productivity CPU
+GPU,NVIDIA RTX 4060,300,Gaming,Mid,PCIe 4.0,115,Solid 1080p/1440p gaming card
+GPU,NVIDIA RTX 4070,550,Gaming,High,PCIe 4.0,200,Excellent 1440p/4K gaming card
+GPU,NVIDIA RTX 4070 Ti,800,Video/photo editing,High,PCIe 4.0,285,Great for GPU-accelerated editing/rendering
+GPU,AMD Radeon RX 6600,220,Gaming,Mid,PCIe 4.0,132,Budget-friendly 1080p gaming card
+GPU,Intel UHD Graphics 730,0,Office and school work,Low,Integrated,15,Built-in graphics for basic tasks
+GPU,NVIDIA GTX 1650,150,General everyday use,Low,PCIe 3.0,75,Light gaming and everyday graphics
+RAM,Corsair Vengeance 16GB DDR4,45,General everyday use,Low,DDR4,,16GB (2x8GB) 3200MHz
+RAM,Corsair Vengeance 32GB DDR4,90,Gaming,Mid,DDR4,,32GB (2x16GB) 3600MHz
+RAM,G.Skill Trident Z 32GB DDR5,140,Video/photo editing,High,DDR5,,32GB (2x16GB) 6000MHz
+RAM,Kingston Fury 16GB DDR4,40,Office and school work,Low,DDR4,,16GB (2x8GB) 3200MHz
+RAM,Corsair Dominator 64GB DDR5,280,Video/photo editing,High,DDR5,,64GB (2x32GB) 6000MHz for heavy editing
+Motherboard,MSI B550 Tomahawk,140,Gaming,Mid,AM4,,Reliable mid-range AM4 board
+Motherboard,ASUS ROG Strix B650E,220,Gaming,High,AM5,,Modern AM5 board with good features
+Motherboard,MSI PRO B760M,130,Office and school work,Low,LGA1700,,Solid budget board for everyday use
+Motherboard,ASUS ProArt X670E,350,Video/photo editing,High,AM5,,Feature-rich board for creators
+Motherboard,Gigabyte B450M,80,General everyday use,Low,AM4,,Affordable entry-level board
+Storage,Samsung 970 EVO 500GB NVMe,45,General everyday use,Low,NVMe,,Fast everyday storage
+Storage,Samsung 980 Pro 1TB NVMe,90,Gaming,Mid,NVMe,,Fast game loading and storage
+Storage,WD Black SN850X 2TB NVMe,150,Video/photo editing,High,NVMe,,High-capacity fast storage for large files
+Storage,Crucial MX500 500GB SATA SSD,40,Office and school work,Low,SATA,,Reliable budget SSD
+Storage,Seagate Barracuda 2TB HDD,55,Video/photo editing,High,SATA,,Extra bulk storage for media files
+PSU,Corsair CV550,55,General everyday use,Low,ATX,550,Reliable budget power supply
+PSU,EVGA 650 GQ,80,Gaming,Mid,ATX,650,Good semi-modular PSU for gaming builds
+PSU,Corsair RM850x,140,Video/photo editing,High,ATX,850,High-wattage PSU for powerful components
+PSU,Seasonic Focus 550,70,Office and school work,Low,ATX,550,Efficient and quiet PSU
+Case,NZXT H510,70,Gaming,Mid,ATX Mid Tower,,Clean design with good airflow
+Case,Cooler Master MasterBox Q300L,50,General everyday use,Low,Micro-ATX,,Compact and affordable case
+Case,Fractal Design Meshify 2,150,Video/photo editing,High,ATX Mid Tower,,Excellent airflow for high-performance builds
+Case,Corsair 4000D Airflow,95,Gaming,Mid,ATX Mid Tower,,Popular airflow-focused case
