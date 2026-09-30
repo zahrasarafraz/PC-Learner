@@ -21,9 +21,288 @@ from component_info import COMPONENT_INFO
 # ---------------------------------------------------------
 # PAGE SETUP
 # ---------------------------------------------------------
-st.set_page_config(page_title="PC Learner", page_icon="🖥️")
+st.set_page_config(page_title="PC Learner", page_icon="🖥️", layout="wide")
 st.title("🖥️ PC Learner")
 st.write("Learn how PCs work, and get a build recommendation that fits you.")
+
+# Modern CSS Styling
+modern_css = """
+<style>
+    /* Root color variables */
+    :root {
+        --primary-color: #6366f1;
+        --secondary-color: #ec4899;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --dark-bg: #0f172a;
+        --light-bg: #f8fafc;
+        --card-bg: #ffffff;
+        --text-primary: #1e293b;
+        --text-secondary: #64748b;
+        --border-color: #e2e8f0;
+        --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Main container styling */
+    .main {
+        background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+
+    /* Header styling */
+    h1 {
+        background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 2.5rem !important;
+        font-weight: 700 !important;
+        margin-bottom: 0.5rem !important;
+        letter-spacing: -0.5px;
+    }
+
+    h2, h3 {
+        color: #1e293b;
+        font-weight: 600;
+    }
+
+    /* Subheader text */
+    .stMarkdown > div:first-child {
+        color: #64748b;
+        font-size: 1.05rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Tab styling */
+    .stTabs [data-baseweb="tab-list"] {
+        gap: 0.5rem;
+        background-color: #f1f5f9;
+        border-radius: 12px;
+        padding: 0.5rem;
+    }
+
+    .stTabs [data-baseweb="tab"] {
+        background-color: transparent;
+        border-radius: 8px;
+        color: #64748b;
+        font-weight: 600;
+        padding: 0.75rem 1.5rem;
+        transition: all 0.3s ease;
+    }
+
+    .stTabs [aria-selected="true"] {
+        background-color: #ffffff;
+        color: #6366f1;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+    }
+
+    .stTabs [aria-selected="false"]:hover {
+        background-color: rgba(99, 102, 241, 0.05);
+    }
+
+    /* Button styling */
+    .stButton > button {
+        background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%) !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 10px !important;
+        padding: 0.75rem 2rem !important;
+        font-size: 1rem !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+    }
+
+    .stButton > button:hover {
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4) !important;
+    }
+
+    .stButton > button:active {
+        transform: translateY(0) !important;
+    }
+
+    /* Selectbox styling */
+    .stSelectbox [data-baseweb="select"] {
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 2px solid #e2e8f0;
+        transition: all 0.3s ease;
+    }
+
+    .stSelectbox [data-baseweb="select"]:hover {
+        border-color: #6366f1;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+    }
+
+    .stSelectbox [data-baseweb="select"]:focus-within {
+        border-color: #6366f1;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    }
+
+    /* Slider styling */
+    .stSlider [data-testid="stSliderThumb"] {
+        background-color: #6366f1 !important;
+    }
+
+    .stSlider [data-testid="stSliderTickBar"] {
+        background-color: #e2e8f0 !important;
+    }
+
+    .stSlider > div > div {
+        background-color: #6366f1 !important;
+    }
+
+    /* Text input styling */
+    .stTextInput input {
+        background-color: #ffffff;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 10px !important;
+        padding: 0.75rem 1rem !important;
+        font-size: 1rem !important;
+        transition: all 0.3s ease;
+    }
+
+    .stTextInput input:focus {
+        border-color: #6366f1 !important;
+        box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1) !important;
+    }
+
+    /* Info box styling */
+    .stInfo {
+        background-color: #dbeafe !important;
+        border-left: 4px solid #3b82f6 !important;
+        border-radius: 8px !important;
+        padding: 1rem !important;
+    }
+
+    .stInfo > div {
+        color: #1e40af !important;
+        font-weight: 500 !important;
+    }
+
+    /* Success box styling */
+    .stSuccess {
+        background-color: #d1fae5 !important;
+        border-left: 4px solid #10b981 !important;
+        border-radius: 8px !important;
+        padding: 1rem !important;
+    }
+
+    .stSuccess > div {
+        color: #065f46 !important;
+        font-weight: 500 !important;
+    }
+
+    /* Warning box styling */
+    .stWarning {
+        background-color: #fef3c7 !important;
+        border-left: 4px solid #f59e0b !important;
+        border-radius: 8px !important;
+        padding: 1rem !important;
+    }
+
+    .stWarning > div {
+        color: #78350f !important;
+        font-weight: 500 !important;
+    }
+
+    /* Expander styling */
+    .stExpander {
+        background-color: #f8fafc;
+        border: 2px solid #e2e8f0 !important;
+        border-radius: 10px !important;
+        transition: all 0.3s ease;
+    }
+
+    .stExpander:hover {
+        border-color: #6366f1;
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+    }
+
+    .stExpander > div:first-child {
+        color: #1e293b;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    /* Metric styling */
+    .stMetric {
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 1.5rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        border: 1px solid #e2e8f0;
+    }
+
+    .stMetric [data-testid="stMetricLabel"] {
+        color: #64748b;
+        font-weight: 600;
+    }
+
+    .stMetric [data-testid="stMetricValue"] {
+        color: #6366f1;
+        font-size: 2rem !important;
+    }
+
+    /* Divider styling */
+    .stDivider {
+        border-top: 2px solid #e2e8f0 !important;
+        margin: 2rem 0 !important;
+    }
+
+    /* Write/text styling */
+    .stMarkdown {
+        color: #1e293b;
+        line-height: 1.6;
+    }
+
+    /* Subheader styling */
+    h4, h5, h6 {
+        color: #1e293b;
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Spinner styling */
+    .stSpinner {
+        color: #6366f1 !important;
+    }
+
+    /* Overall text color */
+    body {
+        color: #1e293b;
+    }
+
+    /* Sidebar styling */
+    .stSidebar {
+        background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+    }
+
+    /* Code block styling */
+    code {
+        background-color: #f1f5f9;
+        border-radius: 6px;
+        padding: 0.25rem 0.5rem;
+        color: #ec4899;
+        font-weight: 500;
+    }
+
+    /* Link styling */
+    a {
+        color: #6366f1;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #ec4899;
+    }
+</style>
+"""
+
+st.markdown(modern_css, unsafe_allow_html=True)
 
 # Load the spreadsheet of parts once, so every tab can use it
 parts = pd.read_csv("components.csv")
